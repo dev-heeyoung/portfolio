@@ -8,7 +8,7 @@ export default function Home() {
 
     return (
         <section className='h-screen w-full flex text-center items-center'>
-            <div class="lines absolute w-screen h-screen">
+            <div class="lines absolute w-screen h-screen z-0">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -41,10 +41,10 @@ export default function Home() {
                 </div>
             </div>
             <div className='w-4/5 flex flex-col text-left text-9xl pl-20 font-point uppercase z-20'>
-                <Link to='' className='my-2 w-fit hover:animate-categorySlide hover:italic'>work</Link>
-                <Link to='' className='my-2 w-fit hover:animate-categorySlide hover:italic'>about</Link>
-                <Link to='' className='my-2 w-fit hover:animate-categorySlide hover:italic'>testimonials</Link>
-                <Link to='' className='my-2 w-fit hover:animate-categorySlide hover:italic'>contact</Link>
+                <Link to='/work' className='my-2 w-fit hover:animate-categorySlide hover:italic'>work</Link>
+                <Link to='/about' className='my-2 w-fit hover:animate-categorySlide hover:italic'>about</Link>
+                <Link to='/testimonials' className='my-2 w-fit hover:animate-categorySlide hover:italic'>testimonials</Link>
+                <Link to='/contact' className='my-2 w-fit hover:animate-categorySlide hover:italic'>contact</Link>
             </div>
         </section>
     );

@@ -39,7 +39,8 @@ module.exports = {
       },
       animation: {
         categorySlide: 'categorySlide 1s linear forwards',
-        textSlide: 'textSlide 5s infinite'
+        textSlide: 'textSlide 5s infinite',
+        menuSlide: 'menuSlide 3s ease-in'
       }
     }
   },

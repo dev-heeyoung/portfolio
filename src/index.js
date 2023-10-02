@@ -8,6 +8,7 @@ import Contact from './pages/Contact'
 import About from './pages/About'
 import Work from './pages/Work'
 import Home from './pages/Home'
+import Testimonials from './pages/Testimonials'
 
 const router = createBrowserRouter([
   {
@@ -16,8 +17,9 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <Home /> },
-      { path: '/about', element: <About /> },
       { path: '/work', element: <Work /> },
+      { path: '/about', element: <About /> },
+      { path: '/testimonials', element: <Testimonials /> },
       { path: '/contact', element: <Contact /> }
     ]
   }
