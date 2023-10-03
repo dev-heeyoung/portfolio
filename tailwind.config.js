@@ -7,7 +7,8 @@ module.exports = {
       colors: {
         bgBasic: '#1a1f29ff',
         textBasic: '#e9e0daff',
-        point: '#c9ab78ff'
+        point: '#c9ab78ff',
+        bgSkill: '#a8a29e'
       },
       fontFamily: {
         point: ['Cinzel', 'serif'],
@@ -21,7 +22,8 @@ module.exports = {
       },
       backgroundImage: {
         main: 'url("/src/images/img1.jpg")',
-        mainSub: 'url("/src/images/img2.JPG")'
+        mainSub: 'url("/src/images/img2.JPG")',
+        sample: 'url("/src/images/sample.png")'
       },
       keyframes: {
         categorySlide: {
