@@ -1,10 +1,5 @@
-import React from 'react';
+import React from "react";
 
 export default function ErrorPage() {
-    return (
-        <div>
-            error
-        </div>
-    );
+  return <div>error</div>;
 }
-
