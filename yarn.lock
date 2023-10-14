@@ -9887,6 +9887,7 @@ __metadata:
     react: ^18.2.0
     react-dom: ^18.2.0
     react-icons: ^4.11.0
+    react-intersection-observer: ^9.5.2
     react-router-dom: ^6.16.0
     react-scripts: 5.0.1
     tailwindcss: ^3.3.3
@@ -11018,6 +11019,15 @@ __metadata:
   peerDependencies:
     react: "*"
   checksum: 7b8b80bbe2dabcc54b6c2129b7761a04b19caebe24389adc7683478ef41212b9ca0b53c63abcc06b3c01b94c84855ec5142b4c357e19c4aaaad9a4db23a3c485
+  languageName: node
+  linkType: hard
+
+"react-intersection-observer@npm:^9.5.2":
+  version: 9.5.2
+  resolution: "react-intersection-observer@npm:9.5.2"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: cdbe40544930d59fc3820bce017fb688910cbecd7baaf382387a3d60d98a36e1d1e4bc27a876775e99b2a9f86762286a29d7bca21f3345f653cff29850c2641d
   languageName: node
   linkType: hard
 

@@ -24,7 +24,16 @@ module.exports = {
       backgroundImage: {
         main: 'url("/src/images/img1.jpg")',
         mainSub: 'url("/src/images/img2.JPG")',
-        sample: 'url("/src/images/sample.png")'
+        sample: 'url("/src/images/sample.png")',
+        about:
+          'url("https://cdn.pixabay.com/photo/2016/11/14/03/38/achieve-1822503_1280.jpg")',
+        about1: 'url("/src/images/about1.jpg")',
+        about2: 'url("/src/images/about2.jpg")',
+        about3: 'url("/src/images/about3.jpg")',
+        about4: 'url("/src/images/about4.jpg")',
+        about5: 'url("/src/images/about5.jpg")',
+        about6: 'url("/src/images/about6.jpg")',
+        about7: 'url("/src/images/about7.jpg")'
       },
       keyframes: {
         categorySlide: {
@@ -43,13 +52,31 @@ module.exports = {
           '50%': {
             transform: 'translateX(10px)'
           }
+        },
+        scrolling: {
+          '0%': {
+            transform: 'translateX(0)'
+          },
+          '100%': {
+            transform: 'translatex(-50%)'
+          }
+        },
+        scrollingReverse: {
+          '0%': {
+            transform: 'translateX(-50%)'
+          },
+          '100%': {
+            transform: 'translatex(0)'
+          }
         }
       },
       animation: {
         categorySlide: 'categorySlide 1s linear forwards',
         textSlide: 'textSlide 5s infinite',
         menuSlide: 'menuSlide 3s ease-in',
-        textMoving: 'textMoving 1s infinite'
+        textMoving: 'textMoving 1s infinite',
+        scrolling: 'scrolling 50s linear infinite',
+        scrollingReverse: 'scrollingReverse 30s linear infinite'
       }
     }
   },

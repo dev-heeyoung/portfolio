@@ -8,10 +8,6 @@ import { IoMdTime } from "react-icons/io"
 import Clock from '../components/Clock';
 
 export default function Contact() {
-    
-
-
-
     return (
         <section className='relative w-screen h-screen flex flex-col items-end overflow-hidden'>
             <div class="lines absolute w-screen h-screen z-0">
