@@ -3,7 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 
 export default function Work() {
   return (
-    <section className="h-screen w-full">
+    <section className="h-screen w-full relative">
       <div class="lines absolute w-screen h-screen z-0">
         <div class="line"></div>
         <div class="line"></div>
@@ -18,7 +18,7 @@ export default function Work() {
           voluptatibus non aspernatur odio!
         </p>
       </div>
-      <div className="w-full grid grid-cols-4 gap-16 border-t px-8 py-10">
+      <div className="w-full grid grid-cols-4 gap-16 border-t px-8 py-10 relative">
         <ProjectCard
           name="projectName"
           client="client"

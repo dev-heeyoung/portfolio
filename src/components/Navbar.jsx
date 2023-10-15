@@ -6,148 +6,91 @@ import { PiLinkedinLogo } from "react-icons/pi";
 
 export default function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [isMenuHovered, setIsMenuHovered] = useState([
-    false,
-    false,
-    false,
-    false,
-  ]);
-
-  const handleMenuClick = () => setIsMenuClicked((prev) => !prev);
-  const handleMenuHover = (e) => {
-    switch (e.target.innerText) {
-      case "WORK":
-        setIsMenuHovered((prev) =>
-          prev.map((status, index) => index === 0 && !status),
-        );
-        break;
-      case "ABOUT":
-        setIsMenuHovered((prev) =>
-          prev.map((status, index) => index === 1 && !status),
-        );
-        break;
-      case "TESTIMONIALS":
-        setIsMenuHovered((prev) =>
-          prev.map((status, index) => index === 2 && !status),
-        );
-        break;
-      case "CONTACT":
-        setIsMenuHovered((prev) =>
-          prev.map((status, index) => index === 3 && !status),
-        );
-        break;
-      default:
-    }
-  };
 
   return (
-    <header className="absolute w-full z-50">
-      <div className="relative flex justify-between mx-auto px-16 py-10 ">
+    <header className="fixed top-0 w-full h-full z-50">
+      <div className=" flex justify-between mx-auto px-16 py-10 ">
         <Link to="/" className="">
           H
         </Link>
         <div>
           <div>
             <AiOutlineMenu
-              onClick={handleMenuClick}
+              onClick={()=>setIsMenuClicked(true)}
               className="block text-2xl cursor-pointer "
             />
           </div>
           <div
             className={`${
               isMenuClicked
-                ? "transition-all 3s ease-in top-0 right-0 "
-                : "-right-1/4 top-0"
-            } transition-all 5s ease-in absolute flex flex-col justify-between py-10 px-16 h-screen w-1/4 text-left font-title text-bgBasic bg-textBasic`}
+                ? "transition-all 3s ease-in w-96 2xl:w-1/4"
+                : "w-0 "
+            } transition-all 5s ease-in fixed text-left font-title h-screen text-bgBasic bg-textBasic top-0 right-0 `}
           >
-            <div className="w-full flex justify-end">
-              <CiSquareRemove
-                onClick={handleMenuClick}
-                className="text-3xl cursor-pointer"
-              />
-            </div>
-            <div className="border-b border-bgBasic py-3 text-sm opacity-70">
-              NAVIGATION
-            </div>
-            <nav className="flex flex-col text-3xl font-title uppercase">
-              <Link
-                to="/work"
-                className="my-3 flex items-center hover:animate-bounce"
-              >
-                <div
-                  className={`h-2 w-2 bg-bgBasic rounded-full opacity-0 ${
-                    isMenuHovered[0] && "animate-ping opacity-100"
-                  }`}
+            <div 
+              onMouseLeave={()=>setIsMenuClicked(false)}
+              className="flex flex-col justify-between h-full py-10 px-16 w-full z-50">
+              <div className="w-full flex justify-end">
+                <CiSquareRemove
+                  onClick={()=>setIsMenuClicked(false)}
+                  className="text-3xl cursor-pointer"
                 />
-                <p
-                  onMouseEnter={handleMenuHover}
-                  onMouseLeave={handleMenuHover}
-                  className="pl-5 opacity-80 hover:opacity-100"
+              </div>
+              <div className="border-b border-bgBasic py-3 text-sm opacity-70">
+                NAVIGATION
+              </div>
+              <nav className="flex flex-col text-3xl font-title uppercase">
+                <Link
+                  to="/work"
+                  className="group my-3 flex items-center hover:animate-bounce"
+                  onClick={()=>setIsMenuClicked(false)}
                 >
-                  work
-                </p>
-              </Link>
-              <Link
-                to="/about"
-                className="my-3 flex items-center hover:animate-bounce"
-              >
-                <div
-                  className={`h-2 w-2 bg-bgBasic rounded-full opacity-0 ${
-                    isMenuHovered[1] && "animate-ping opacity-100"
-                  }`}
-                />
-                <p
-                  onMouseEnter={handleMenuHover}
-                  onMouseLeave={handleMenuHover}
-                  className="pl-5 opacity-80 hover:opacity-100"
+                  <div className='h-2 w-2 bg-bgBasic rounded-full opacity-0 group-hover:animate-ping group-hover:opacity-100'/>
+                  <p className="pl-5 opacity-80 hover:opacity-100">
+                    work
+                  </p>
+                </Link>
+                <Link
+                  to="/about"
+                  className="group my-3 flex items-center hover:animate-bounce"
+                  onClick={()=>setIsMenuClicked(false)}
                 >
-                  about
-                </p>
-              </Link>
-              <Link
-                to="/testimonials"
-                className="my-3 flex items-center hover:animate-bounce"
-              >
-                <div
-                  className={`h-2 w-2 bg-bgBasic rounded-full opacity-0 ${
-                    isMenuHovered[2] && "animate-ping opacity-100"
-                  }`}
-                />
-                <p
-                  onMouseEnter={handleMenuHover}
-                  onMouseLeave={handleMenuHover}
-                  className="pl-5 opacity-80 hover:opacity-100"
+                  <div className='h-2 w-2 bg-bgBasic rounded-full opacity-0 group-hover:animate-ping group-hover:opacity-100'/>
+                  <p className="pl-5 opacity-80 hover:opacity-100">
+                    about
+                  </p>
+                </Link>
+                <Link
+                  to="/testimonials"
+                  className="group my-3 flex items-center hover:animate-bounce"
+                  onClick={()=>setIsMenuClicked(false)}
                 >
-                  testimonials
-                </p>
-              </Link>
-              <Link
-                to="/contact"
-                className="my-3 flex items-center hover:animate-bounce"
-              >
-                <div
-                  className={`h-2 w-2 bg-bgBasic rounded-full opacity-0 ${
-                    isMenuHovered[3] && "animate-ping opacity-100"
-                  }`}
-                />
-                <p
-                  onMouseEnter={handleMenuHover}
-                  onMouseLeave={handleMenuHover}
-                  className="pl-5 opacity-80 hover:opacity-100"
+                  <div className='h-2 w-2 bg-bgBasic rounded-full opacity-0 group-hover:animate-ping group-hover:opacity-100'/>
+                  <p className="pl-5 opacity-80 hover:opacity-100">
+                    testimonials
+                  </p>
+                </Link>
+                <Link
+                  to="/contact"
+                  className="group my-3 flex items-center hover:animate-bounce"
+                  onClick={()=>setIsMenuClicked(false)}
                 >
-                  contact
-                </p>
-              </Link>
-            </nav>
-            <div className="flex w-full border-t border-bgBasic py-5 justify-items-end">
-              <Link to="" className="flex mr-4">
-                <PiLinkedinLogo className="text-2xl mr-1 opacity-70 hover:opacity-100" />
-                LinkedIn
-              </Link>
-              <Link to="" className="flex">
-                <AiOutlineGithub className="text-2xl mr-1 opacity-70 hover:opacity-100" />
-                Github
-              </Link>
+                  <div className='h-2 w-2 bg-bgBasic rounded-full opacity-0 group-hover:animate-ping group-hover:opacity-100'/>
+                  <p className="pl-5 opacity-80 hover:opacity-100">
+                    contact
+                  </p>
+                </Link>
+              </nav>
+              <div className="flex w-full border-t border-bgBasic py-5 justify-items-end">
+                <Link to="https://www.linkedin.com/in/heeyoung-yang/" className="flex mr-4 opacity-70 hover:opacity-100">
+                  <PiLinkedinLogo className="text-2xl mr-1" />
+                  LinkedIn
+                </Link>
+                <Link to="https://github.com/dev-heeyoung" className="flex opacity-70 hover:opacity-100">
+                  <AiOutlineGithub className="text-2xl mr-1" />
+                  Github
+                </Link>
+              </div>
             </div>
           </div>
         </div>

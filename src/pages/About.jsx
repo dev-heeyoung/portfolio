@@ -9,7 +9,7 @@ export default function About() {
   const interest = [ 'Reading books', 'Working out', 'Riding a bike', 'Visiting cafes'];
 
   return (
-    <section className='text-center py-36'>
+    <section className='relative text-center py-36 z-10'>
       <div>
         <h1 className=''>
           <p className='font-point text-7xl mb-5 opacity-80'>About</p>

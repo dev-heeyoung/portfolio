@@ -9,7 +9,7 @@ export default function ProjectCard({
   skillSet,
 }) {
   return (
-    <section className="h-128">
+    <section className="h-128 z-20">
       <div className="relative w-full h-full flex flex-wrap justify-center">
         <div className="relative border p-5 m-5 rounded-lg cursor-pointer bg-textBasic text-bgBasic transform transition-transform hover:translate-x-3 hover:-translate-y-3">
           <div className="grid grid-rows-5 w-full h-full">

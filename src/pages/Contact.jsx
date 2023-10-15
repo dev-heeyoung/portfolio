@@ -9,7 +9,7 @@ import Clock from '../components/Clock';
 
 export default function Contact() {
     return (
-        <section className='relative w-screen h-screen flex flex-col items-end overflow-hidden'>
+        <section className='relative max-w-screen flex flex-col items-end overflow-hidden z-10'>
             <div class="lines absolute w-screen h-screen z-0">
                 <div className="line"></div>
                 <div className="line"></div>
