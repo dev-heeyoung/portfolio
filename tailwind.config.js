@@ -9,24 +9,28 @@ module.exports = {
         textBasic: '#e9e0daff',
         point: '#c9ab78ff',
         bgSkill: '#a8a29e',
-        lightG: '#e4e4e4'
+        lightG: '#e4e4e4',
+        customBlue: '#007acc'
       },
       fontFamily: {
         point: ['Cinzel', 'serif'],
         title: ['Montserrat', 'sans-serif'],
         basic: ['Lato', 'sans-serif']
       },
+      width: {
+        1: '1px'
+      },
       height: {
         196: '48rem',
         160: '40rem',
-        128: '32rem'
+        128: '32rem',
+        15: '15vh'
       },
       backgroundImage: {
         main: 'url("/src/images/img1.jpg")',
         mainSub: 'url("/src/images/img2.JPG")',
         sample: 'url("/src/images/sample.png")',
-        about:
-          'url("https://cdn.pixabay.com/photo/2016/11/14/03/38/achieve-1822503_1280.jpg")',
+        about: 'url("/src/images/about.jpg")',
         about1: 'url("/src/images/about1.jpg")',
         about2: 'url("/src/images/about2.jpg")',
         about3: 'url("/src/images/about3.jpg")',
@@ -34,6 +38,10 @@ module.exports = {
         about5: 'url("/src/images/about5.jpg")',
         about6: 'url("/src/images/about6.jpg")',
         about7: 'url("/src/images/about7.jpg")'
+      },
+      animationDelay: {
+        2000: '2s',
+        3000: '3s'
       },
       keyframes: {
         categorySlide: {
@@ -68,6 +76,14 @@ module.exports = {
           '100%': {
             transform: 'translatex(0)'
           }
+        },
+        drop: {
+          '0%': {
+            top: '-50%'
+          },
+          '100%': {
+            top: '110%'
+          }
         }
       },
       animation: {
@@ -76,9 +92,12 @@ module.exports = {
         menuSlide: 'menuSlide 3s ease-in',
         textMoving: 'textMoving 1s infinite',
         scrolling: 'scrolling 50s linear infinite',
-        scrollingReverse: 'scrollingReverse 30s linear infinite'
+        scrollingReverse: 'scrollingReverse 30s linear infinite',
+        drop: 'drop 7s infinite cubic-bezier(0.4, 0.26, 0, 0.97)',
+        dropDelay1: 'drop 7s 2s infinite cubic-bezier(0.4, 0.26, 0, 0.97)',
+        dropDelay2: 'drop 7s 3s infinite cubic-bezier(0.4, 0.26, 0, 0.97)'
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animation-delay')]
 }

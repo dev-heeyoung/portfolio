@@ -23,7 +23,7 @@ code {
 }
 
 /* Background Line animation */
-.line {
+/* .line {
   position: absolute;
   width: 1px;
   height: 100%;
@@ -75,4 +75,4 @@ code {
   100% {
     top: 110%;
   }
-}
+} */

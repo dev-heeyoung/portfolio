@@ -9891,6 +9891,7 @@ __metadata:
     react-router-dom: ^6.16.0
     react-scripts: 5.0.1
     tailwindcss: ^3.3.3
+    tailwindcss-animation-delay: ^1.0.7
     web-vitals: ^2.1.0
   languageName: unknown
   linkType: soft
@@ -12408,6 +12409,15 @@ __metadata:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 6e8fc7e1486b8b54bea91199d9535bb72f10842e40c79e882fc94fb7b14b89866adf2fd79efa5ebb5b658bc07fb459ccce5ac0e99ef3d72f474e74aaf284029d
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animation-delay@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "tailwindcss-animation-delay@npm:1.0.7"
+  peerDependencies:
+    tailwindcss: ">=2.0.0"
+  checksum: 26c9b1271bfb019bb67d420376ac256bed4506e8d048cdc1cf6f3f02796ecc2be0e67ceace5aa8e438a6bc93ada6dbaed7520040d6136716c34181af83c5f195
   languageName: node
   linkType: hard
 

@@ -8,8 +8,8 @@ export default function Navbar() {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
 
   return (
-    <header className="fixed top-0 w-full h-full z-50">
-      <div className=" flex justify-between mx-auto px-16 py-10 ">
+    <header className="fixed top-0 w-full z-50">
+      <div className=" flex justify-between mx-auto px-8 md:px-16 py-10 ">
         <Link to="/" className="">
           H
         </Link>
@@ -40,6 +40,16 @@ export default function Navbar() {
                 NAVIGATION
               </div>
               <nav className="flex flex-col text-3xl font-title uppercase">
+                <Link
+                  to="/"
+                  className="group my-3 flex items-center hover:animate-bounce"
+                  onClick={()=>setIsMenuClicked(false)}
+                >
+                  <div className='h-2 w-2 bg-bgBasic rounded-full opacity-0 group-hover:animate-ping group-hover:opacity-100'/>
+                  <p className="pl-5 opacity-80 hover:opacity-100">
+                    home
+                  </p>
+                </Link>
                 <Link
                   to="/work"
                   className="group my-3 flex items-center hover:animate-bounce"

@@ -22,7 +22,7 @@ export default function AboutImg() {
     }, [inView, entry]);
     
     return (
-      <div ref={ref} className='px-16'>
+      <div ref={ref} className='px-16 relative z-10'>
         { isLoaded ? (
         <div className='transition-all duration-1000 bg-about w-full h-160 bg-center bg-cover mx-auto'></div>
         ): (
